@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.Demo">
+
+    <ImageButton
+        android:id="@+id/closediag"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="5dp"
+        android:background="#5B000000"
+        android:elevation="1dp"
+        android:src="@drawable/ic_close_white_24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/demoContainer"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:background="@drawable/boxbg">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarDemo"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_margin="2dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:title="Select Candidate"
+            app:titleTextAppearance="@style/azo2" />
+
+        <ImageView
+            android:id="@+id/tap1outer"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="25dp"
+            android:elevation="2dp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbarDemo"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/tap1inner"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="25dp"
+            android:elevation="2dp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbarDemo"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/tap2outer"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="125dp"
+            android:elevation="2dp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbarDemo"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/tap2inner"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="125dp"
+            android:elevation="2dp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbarDemo"
+            tools:ignore="ContentDescription" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rec2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:layout_constraintTop_toBottomOf="@id/toolbarDemo" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorSecondary"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <Button
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/buttonbg"
+                android:text="Done"
+                android:textAllCaps="false"
+                app:backgroundTint="@color/button" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradient_bg_bottom"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:id="@+id/messageDemo"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:elevation="2dp"
+                android:gravity="center"
+                android:paddingStart="10dp"
+                android:paddingTop="100dp"
+                android:paddingEnd="10dp"
+                android:text="Sample Text"
+                android:textSize="17dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel2"
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="6dp"
+            android:background="@drawable/gradient_bg_top"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/messageDemo2"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:elevation="2dp"
+                android:gravity="center"
+                android:paddingStart="10dp"
+                android:paddingBottom="20dp"
+                android:paddingEnd="10dp"
+                android:text="Tap on the Done button at the bottom of the screen to submit your vote !"
+                android:textSize="17dp" />
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

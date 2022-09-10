@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">VoteOnlineBruh</string>
+    <string name="web_host">http://www.remote-voting.rf.gd</string>
+    <string name="private_web_host">http://private-poll.epizy.com</string>
+    <!--    <string name="web_host">https://www.remote-voting.xyz</string>-->
+    <string name="cookie_end">; expires=Friday, 1 January 2038 at 05:25:55; path=/</string>
+    <string name="title_activity_booth_details_map">Map</string>
+</resources>

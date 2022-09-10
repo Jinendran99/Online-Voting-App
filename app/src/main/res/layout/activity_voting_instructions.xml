@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.VotingInstructions"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarIns"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:title="Instructions"
+        app:titleTextAppearance="@style/azo" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"        
+        android:padding="20dp"
+        android:text="Please read the following instructions carefully before proceeding :" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"                
+                android:padding="15dp"
+                android:textStyle="normal"
+                android:text="1.  On tapping the 'Proceed' button you will be required to enter the Booth ID of your booth and an OTP that will be provided to you by the polling officer. After that you will be taken to the voting area and you can vote there." />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"                
+                android:padding="15dp"
+                android:textStyle="normal"
+                android:text="2.  The app will enter fullscreen mode to prevent you from accidentally pressing the navigation buttons." />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"                
+                android:padding="15dp"
+                android:textStyle="normal"
+                android:text="3.  The back button will be disabled and you cannot go back once you are in the voting area. Pressing the other navigation buttons while you are in the voting area will result in you getting logged out. Your vote will be registered as NOTA." />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"                
+                android:padding="15dp"
+                android:textStyle="normal"
+                android:text="4.  Before you proceed, it is recommended that you watch the demo of the voting process by tapping the 'Demo' button to get an experience of the voting area." />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"                
+                android:padding="15dp"
+                android:textStyle="normal"
+                android:text="5.  Vote responsibly." />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_margin="10dp"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/demo"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:background="@drawable/buttonbg"
+            android:text="Demo"
+            android:textAllCaps="false"
+            android:layout_margin="3dp"
+            app:backgroundTint="@color/button"
+            android:layout_weight=".4"/>
+
+        <Space
+            android:layout_width="15dp"
+            android:layout_height="0dp"/>
+
+        <Button
+            android:id="@+id/proceed"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:background="@drawable/buttonbg"
+            android:text="Proceed"
+            android:textAllCaps="false"
+            android:layout_margin="3dp"
+            app:backgroundTint="@color/button"
+            android:layout_weight=".4"/>
+
+    </LinearLayout>
+
+</LinearLayout>
